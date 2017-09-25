@@ -1,6 +1,6 @@
 <?php
 
-class dog {
+class house {
 	public $owner;
 	public $name;
 	public $size;
