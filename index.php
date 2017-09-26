@@ -35,14 +35,14 @@ $ignodog->size = "small";
 $ignodog->color = "black";
 $ignodog->breed = "German Shepherd";
 $ignodog->sex = "male";
-
-
-
-
-
-
-
-
+echo $ignodog->color;
+echo "<br>";
+echo $ignodog->eat("pork");
+echo $ignodog->sleep("at home");
+echo $ignodog->bark("because hes angry");
+echo $ignodog->shit("at the park");
+echo $ignodog->destroy("shoes");
+echo $ignodog->walk("at the park");
 echo "<hr>";
 echo "House";
 echo "<hr>";

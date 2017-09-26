@@ -4,8 +4,8 @@ class dog {
 	public $owner;
 	public $name;
 	public $size;
-	public $color;
-	public $smell;
+	private $color;
+	private $breed;
 	public $sex;
 
 
@@ -21,30 +21,35 @@ class dog {
 		$this->$parameter = $value;
 	}
 
+	public function __get($parameter) {
+		echo "Someone wants to know the $parameter of the dog <br>";
+		return $this->$parameter;
+	}
+
 	public function eat($what) {
-		echo "Dog is eating <br>";
+		echo "Dog is eating $what <br>";
 	}
 
 
 	public function sleep($where) {
-		echo "Dog is sleeping <br>";
+		echo "Dog is sleeping $where <br>";
 	}
 
 
 	public function bark($why) {
-		echo "Dog is barking <br>";
+		echo "Dog is barking $why <br>";
 	}
 	
 	
 	public function shit($where) {
-		echo "Dog is taking shit <br>";
+		echo "Dog is taking shit $where <br>";
 	}
 
 	public function destroy($what) {
-		echo "Dog is taking destroying stuff <br>";
+		echo "Dog is taking destroying $what <br>";
 	}
 
 	public function walk($where) {
-		echo "Dog is going for a walk <br>";
+		echo "Dog is going for a walk $where <br>";
 	}
 }
