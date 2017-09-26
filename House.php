@@ -2,17 +2,16 @@
 
 class house {
 	public $owner;
-	public $name;
+	public $pool;
 	public $size;
 	public $color;
-	public $smell;
-	public $sex;
+	public $toilet;
 
 
 	public function __construct($a1,$a2) {
 		$this->owner = $a1;
-		$this->name = $a2;
-		echo $this->owner . " just got dog named " . $this->name . "<br>";
+		$this->pool = $a2;
+		echo $this->owner . " just bought a house with " . $this->name . "<br>";
 	
 	}
 
@@ -21,30 +20,32 @@ class house {
 		$this->$parameter = $value;
 	}
 
-	public function eat($what) {
-		echo "Dog is eating <br>";
+	public function __get($parameter) {
+		echo "Someone wants to know the $parameter of the dog <br>";
+		return $this->$parameter;
+	}
+
+	public function build() {
+		echo "The house was just finished and the construction is over <br>";
 	}
 
 
-	public function sleep($where) {
-		echo "Dog is sleeping <br>";
+	public function repair($what) {
+		echo "The house has some problems, $what needs to be repaired <br>";
 	}
 
 
-	public function bark($why) {
-		echo "Dog is barking <br>";
+	public function fire($why) {
+		echo "Oh no! The house was set on fire because $why <br>";
 	}
 	
 	
-	public function shit($where) {
-		echo "Dog is taking shit <br>";
+	public function rent($what) {
+		echo "The owner of the house needs money so he rented the $what <br>";
 	}
 
-	public function destroy($what) {
+	public function sell($what) {
 		echo "Dog is taking destroying stuff <br>";
 	}
 
-	public function walk($where) {
-		echo "Dog is going for a walk <br>";
-	}
 }

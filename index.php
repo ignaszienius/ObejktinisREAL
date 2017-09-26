@@ -39,10 +39,17 @@ echo $ignodog->color;
 echo "<br>";
 echo $ignodog->eat("pork");
 echo $ignodog->sleep("at home");
-echo $ignodog->bark("because hes angry");
+echo $ignodog->bark("because hes hungry");
 echo $ignodog->shit("at the park");
 echo $ignodog->destroy("shoes");
 echo $ignodog->walk("at the park");
+
 echo "<hr>";
 echo "House";
 echo "<hr>";
+
+include "House.php";
+
+$ignohouse = new House("Ignas", "very big and expensive pool");
+echo $ignohouse->build();
+
