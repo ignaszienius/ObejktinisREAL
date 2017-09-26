@@ -51,5 +51,15 @@ echo "<hr>";
 include "House.php";
 
 $ignohouse = new House("Ignas", "very big and expensive pool");
+$ignohouse->size = "big";
+$ignohouse->color = "white";
+$ignohouse->toilet = "outdoor toilet";
+echo $ignohouse->color;
+echo "<br>";
+
 echo $ignohouse->build();
+echo $ignohouse->fire("somebody smoked in the bed");
+echo $ignohouse->repair("leaking pipe");
+echo $ignohouse->rent("living room");
+
 
